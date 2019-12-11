@@ -16,6 +16,8 @@ namespace HelloWorld
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+          var builder =  services.AddMvcCore();
+            builder.AddJsonFormatters();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -28,6 +30,8 @@ namespace HelloWorld
                 app.UseDeveloperExceptionPage();
             }
 
+            // Configuring the MVC middleware to the request processing pipeline
+            app.UseMvcWithDefaultRoute();
             app.Run(async (context) =>
             {
                 await context.Response.WriteAsync("Hello World! Hello ASP .NET Core 1.0 \n");
