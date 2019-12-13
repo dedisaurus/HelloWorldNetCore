@@ -1,0 +1,41 @@
+﻿@model HelloWorld.Models.Student
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+    <h1>@ViewData["Header"]</h1>
+    @*@{ 
+        var student = ViewData["Student"] as HelloWorld.Models.Student;
+    }*@
+    <div>
+        <table>
+            <tr>
+                <td>Student Id</td>
+                <td>:</td>
+                <td>@Model.StudentId</td>
+            </tr>
+            <tr>
+                <td>Student Name</td>
+                <td>:</td>
+                <td>@Model.Name</td>
+            </tr>
+            <tr>
+                <td>Branch</td>
+                <td>:</td>
+                <td>@Model.Branch</td>
+            </tr>
+            <tr>
+                <td>Section</td>
+                <td>:</td>
+                <td>@Model.Section</td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>:</td>
+                <td>@Model.Gender</td>
+            </tr>
+        </table> 
+    </div>
+</body>
+</html>

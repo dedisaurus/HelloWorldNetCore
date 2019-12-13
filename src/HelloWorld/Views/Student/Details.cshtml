@@ -1,0 +1,65 @@
+﻿@model HelloWorld.Models.StudentDetailsViewModels
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>@Model.Title</title>
+</head>
+<body>
+    <h1>@Model.Header</h1>
+    <div>
+        <table>
+            <tr>
+                <td>Student</td>
+                <td>:</td>
+                <td>@Model.Std.StudentId</td>
+            </tr>
+            <tr>
+                <td>Student Name</td>
+                <td>:</td>
+                <td>@Model.Std.Name</td>
+            </tr>
+            <tr>
+                <td>Branch</td>
+                <td>:</td>
+                <td>@Model.Std.Branch</td>
+            </tr>
+            <tr>
+                <td>Section</td>
+                <td>:</td>
+                <td>@Model.Std.Section</td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>:</td>
+                <td>@Model.Std.Gender</td>
+            </tr>
+        </table>
+    </div>
+    <br />
+    <h1>Student Address</h1>
+    <div>
+        <table>
+            <tr>
+                <td>City</td>
+                <td>:</td>
+                <td>@Model.Adrs.City</td>
+            </tr>
+            <tr>
+                <td>State</td>
+                <td>:</td>
+                <td>@Model.Adrs.State</td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td>:</td>
+                <td>@Model.Adrs.Country</td>
+            </tr>
+            <tr>
+                <td>PIN</td>
+                <td>:</td>
+                <td>@Model.Adrs.PIN</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
