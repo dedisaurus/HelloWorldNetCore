@@ -40,13 +40,7 @@ namespace HelloWorld
             //{
             //    await context.Response.WriteAsync("Hello World! Hello ASP .NET Core 1.0 \n");
             //});
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller}/{action}/{id:int?}",
-                    defaults: new { Controller ="Home", action = "Index"});
-            });
+            app.UseMvc();
         }
     }
 }
