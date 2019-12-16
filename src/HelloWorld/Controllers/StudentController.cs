@@ -45,5 +45,15 @@ namespace HelloWorld.Controllers
             return View(stdView);
         }
 
+        public string Index()
+        {
+            return "Index() Action Method of StudentController";
+        }
+
+        public string Details(string id)
+        {
+            return "Details() Action Method of Student Controller";
+        }
+
     }
 }

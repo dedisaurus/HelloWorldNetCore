@@ -29,8 +29,9 @@ namespace HelloWorld.Data_Access
         }
 
         //public Student GetStudentAll()
-        //{
+        //{ saya sudah diskusikan dengan istri pak karena dari belum ketemu yg take care baby nya siapa dan 
         //    //return this._studentList.All();
+        // 
         //}
     }
 }

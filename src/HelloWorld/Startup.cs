@@ -19,25 +19,33 @@ namespace HelloWorld
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().AddXmlDataContractSerializerFormatters();
-            services.AddSingleton<IStudentRepository, TestStudentRepository>();
+            services.AddMvc();
+                //.AddXmlDataContractSerializerFormatters();
+            //services.AddSingleton<IStudentRepository, TestStudentRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            loggerFactory.AddConsole();
+            //loggerFactory.AddConsole();
 
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
+            //if (env.IsDevelopment())
+            //{
+            //    app.UseDeveloperExceptionPage();
+            //}
 
-            // Configuring the MVC middleware to the request processing pipeline
-            app.UseMvcWithDefaultRoute();
-            app.Run(async (context) =>
+            //// Configuring the MVC middleware to the request processing pipeline
+            //app.UseMvcWithDefaultRoute();
+            //app.Run(async (context) =>
+            //{
+            //    await context.Response.WriteAsync("Hello World! Hello ASP .NET Core 1.0 \n");
+            //});
+            app.UseMvc(routes =>
             {
-                await context.Response.WriteAsync("Hello World! Hello ASP .NET Core 1.0 \n");
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller}/{action}/{id:int?}",
+                    defaults: new { Controller ="Home", action = "Index"});
             });
         }
     }

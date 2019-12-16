@@ -45,5 +45,9 @@ namespace HelloWorld.Controllers
             Student studentDetails = _repository.GetStudentById(Id);
             return View(studentDetails);
         }
+        public string Index()
+        {
+            return "Index() Action Method of StudentController";
+        }
     }
 }
