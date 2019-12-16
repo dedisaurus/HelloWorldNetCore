@@ -15,6 +15,10 @@ namespace HelloWorld.Controllers
         [Route("")]
         [Route("Home")]
         [Route("Home/Index")]
+        public string StartPage()
+        {
+            return "StartPage() Action Method of StudentController";
+        }
         public ViewResult Details()
         {
             ViewData["Title"] = "Student Details Page";
@@ -49,11 +53,8 @@ namespace HelloWorld.Controllers
             Student studentDetails = _repository.GetStudentById(Id);
             return View(studentDetails);
         }
-        public string Index()
-        {
-            return "Index() Action Method of StudentController";
-        }
-        [Route("Home/Details/{id}")]
+        
+        [Route("Home/Details/{id?}")]
         public string Details(int id)
         {
             return "Details() Action Method of HomeController, ID Value = " + id;
